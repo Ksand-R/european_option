@@ -1,5 +1,9 @@
 #include <iostream>
 #include "V0.h"
+#include "V1.h"
+
+typedef void(*GetPrices)(float *pT, float *pK, float *pS0, float *pC);
+GetPrices option_array[9] = { _V0, _V1 };
 
 int main(int argc, char *argv[]){
 
@@ -20,12 +24,14 @@ int main(int argc, char *argv[]){
 	}
 
 	start = omp_get_wtime();
-	V0(pT, pK, pS0, pC);
+	option_array[version](pT, pK, pS0, pC);
 	finish = omp_get_wtime();
 	time = finish - start;
-	std::cout << time << std::endl;
+
+	std::cout << "Price == " << pC[0] << std::endl;
+	std::cout << "time == " << time << std::endl;
 
 	delete[] pT;
 	system("pause");
 	return 0;
-}
+}

@@ -10,4 +10,5 @@ namespace EU_OP {
 	const float T = 3.0f; // option execute time (years)
 	const float S0 = 100.0f; // option price at t == 0;
 	const float K = 100.0f; // strike price -- price fixed in option
+
 }
