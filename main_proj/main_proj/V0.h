@@ -1,7 +1,4 @@
 #pragma once
-#include <cmath>
-#include <omp.h>
-#include <mkl.h>
 #include "Header.h"
 using namespace EU_OP;
 

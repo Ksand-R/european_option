@@ -1,6 +1,9 @@
 #pragma once
+#include <cmath>
+#include <omp.h>
+#include <mkl.h>
 namespace EU_OP {
-	unsigned int	num_Threads = 1;
+	unsigned int	num_Threads = 4;
 	int				N = 10000000;
 	double			time;
 	double			start, finish;

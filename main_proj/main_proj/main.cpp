@@ -2,9 +2,10 @@
 #include "V0.h"
 #include "V1.h"
 #include "V2.h"
+#include "V3.h"
 
 typedef void(*GetPrices)(float *pT, float *pK, float *pS0, float *pC);
-GetPrices option_array[9] = { _V0, _V1, _V2 };
+GetPrices option_array[9] = { _V0, _V1, _V2, _V3 };
 
 int main(int argc, char *argv[]){
 
