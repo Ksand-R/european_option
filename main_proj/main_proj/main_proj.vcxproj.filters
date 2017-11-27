@@ -26,5 +26,26 @@
     <ClInclude Include="V0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="V1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="V8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

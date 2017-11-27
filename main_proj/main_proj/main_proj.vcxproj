@@ -129,6 +129,13 @@
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="V0.h" />
+    <ClInclude Include="V1.h" />
+    <ClInclude Include="V2.h" />
+    <ClInclude Include="V4.h" />
+    <ClInclude Include="V5.h" />
+    <ClInclude Include="V6.h" />
+    <ClInclude Include="V7.h" />
+    <ClInclude Include="V8.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

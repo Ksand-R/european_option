@@ -2,16 +2,32 @@
 #include "V0.h"
 #include "V1.h"
 #include "V2.h"
-#include "V3.h"
+#include "V4.h"
+#include "V5.h"
+#include "V6.h"
+#include "V7.h"
+#include "V8.h"
 
 typedef void(*GetPrices)(float *pT, float *pK, float *pS0, float *pC);
-GetPrices option_array[9] = { _V0, _V1, _V2, _V3 };
+GetPrices option_array[9] = 
+	{ 
+		_V0, //preference 1
+		_V1, //preference 2
+		_V2, //erf
+		_V4, //#pragma simd #pragma vector always
+		_V5, //#pragma simd invsqrt2_1
+		_V6, //#pragma simd invsqrt2_2
+		_V7, //#pragma simd #pragma omp parallel for private
+		_V8  // _V7 + #pragma vector nontemporal
+	};
 
 int main(int argc, char *argv[]){
 
 	unsigned int version;
 	std::cout << "Choose a version:" << std::endl;
 	std::cin >> version;
+
+	//if ver == 6 then ismemalign? islowprecision?
 
 	float* pT = new float[4 * N];
 	float* pK = pT + N;
@@ -30,6 +46,14 @@ int main(int argc, char *argv[]){
 	finish = omp_get_wtime();
 	time = finish - start;
 	std::cout << time;
+
+	///start = omp_get_wtime();
+	///option_array[version](pT, pK, pS0, pC);
+	///finish = omp_get_wtime();
+	///time = finish - start;
+	///std::cout << time;
+
+
 	//std::cout << "Price == " << pC[0] << std::endl;
 	//std::cout << "time == " << time << std::endl;
 
