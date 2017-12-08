@@ -1,7 +1,12 @@
 from subprocess import Popen, PIPE
+import sys
+
+version = sys.argv[1]
+N       = sys.argv[2]
+num_tr  = sys.argv[3]
 
 def one_res():
-    name = 'main_proj.exe'
+    name = 'main_proj.exe' + version + N + num_tr
     proc = Popen(name, shell=True, stdout=PIPE, stderr=PIPE)
     proc.wait()    
     res = proc.communicate()  
@@ -9,21 +14,20 @@ def one_res():
        return res[1]
     return res[0]
 
-def avg_res(count):
+def min_res(count):
 
-    avg_time = 0
+    min_time = 1000000
     
     for i in range(count):
         time = float(one_res())
-        avg_time += time
-
-        avg_time /= count
-    return avg_time
+        if time < min_time:
+            min_time = time
+    return min_time
 
 def write_log(count):
-    avg_time = float(avg_res(count))
+    avg_time = float(min_res(count))
     f = open('log.txt', 'a')
-    f.write(str(count) + '     ' +  str(avg_time) + "\n")
+    f.write(str(count) + '     ' +  str(min_time) + "\n")
     f.close()    
 
-write_log(10)
+write_log(20)

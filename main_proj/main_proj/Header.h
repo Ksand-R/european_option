@@ -3,8 +3,10 @@
 #include <omp.h>
 #include <mkl.h>
 namespace EU_OP {
-	unsigned int	num_Threads = 4;
-	int				N = 10000000;
+
+	unsigned int	num_Threads;
+	int				N; //amount of options 
+	int 			version;
 	double			time;
 	double			start, finish;
 
