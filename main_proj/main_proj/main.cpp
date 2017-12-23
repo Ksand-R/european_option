@@ -21,11 +21,11 @@ GetPrices option_array[9] =
 		_V8  // _V7 + #pragma vector nontemporal
 	};
 
-int main(int argc, char *argv[]){
-	
-	version 	= atoi(argv[1]);
-	N 			= atoi(argv[2]);
-	num_Threads	= atoi(argv[3]);
+int main(int argc, char *argv[])
+{
+	version		= atoi(argv[1]);
+	N			= atoi(argv[2]);
+	num_Threads = atoi(argv[3]);
 
 	float* pT 	= new float[4 * N];
 	float* pK 	= pT + N;
@@ -56,6 +56,6 @@ int main(int argc, char *argv[]){
 	//std::cout << "time == " << time << std::endl;
 
 	delete[] pT;
-	system("pause");
+//	system("pause");
 	return 0;
 }
