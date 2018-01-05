@@ -1,12 +1,6 @@
 #include <iostream>
-#include "V0.h"
-#include "V1.h"
-#include "V2.h"
-#include "V4.h"
-#include "V5.h"
-#include "V6.h"
-#include "V7.h"
-#include "V8.h"
+#include "Header.h"
+using namespace EU_OP;
 
 typedef void(*GetPrices)(float *pT, float *pK, float *pS0, float *pC);
 GetPrices option_array[9] = 
@@ -14,6 +8,7 @@ GetPrices option_array[9] =
 		_V0, //preference 1
 		_V1, //preference 2
 		_V2, //erf
+		_V3, //restrict
 		_V4, //#pragma simd #pragma vector always
 		_V5, //#pragma simd invsqrt2_1
 		_V6, //#pragma simd invsqrt2_2
@@ -42,18 +37,18 @@ int main(int argc, char *argv[])
 	start = omp_get_wtime();
 	option_array[version](pT, pK, pS0, pC);
 	finish 	= omp_get_wtime();
-	time 	= finish - start;
-	std::cout << time;
+	_time 	= finish - start;
+	std::cout << _time;
 
 	///start = omp_get_wtime();
 	///option_array[version](pT, pK, pS0, pC);
 	///finish = omp_get_wtime();
-	///time = finish - start;
-	///std::cout << time;
+	///_time = finish - start;
+	///std::cout << _time;
 
 
 	//std::cout << "Price == " << pC[0] << std::endl;
-	//std::cout << "time == " << time << std::endl;
+	//std::cout << "time == " << _time << std::endl;
 
 	delete[] pT;
 //	system("pause");
