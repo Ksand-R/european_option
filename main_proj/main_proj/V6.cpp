@@ -1,12 +1,9 @@
 #include "Header.h"
-using namespace EU_OP;
 
-void EU_OP::_V6(float* pT, float* pK, float* pS0, float* pC)
+void _V6(float* pT, float* pK, float* pS0, float* pC)
 {
 	int		i;
 	float	d1, d2, erf1, erf2;
-	float	sig2 = sig * sig;
-	float	invf;
 
 #pragma simd
 	for (i = 0; i < N; i++)

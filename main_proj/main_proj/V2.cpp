@@ -1,11 +1,6 @@
 #include "Header.h"
-using namespace EU_OP;
-
-void EU_OP::_V2(float *pT, float *pK, float *pS0, float *pC)
+void _V2(float *pT, float *pK, float *pS0, float *pC)
 {
-	int		i;
-	float	d1, d2;
-	float	erf1, erf2;
 
 	for (i = 0; i < N; i++)
 	{

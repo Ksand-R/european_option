@@ -1,10 +1,7 @@
 #include "Header.h"
-using namespace EU_OP;
-
-void EU_OP::_V0(float *pT, float *pK, float *pS0, float *pC)
+void _V0(float *pT, float *pK, float *pS0, float *pC)
 {
-	int i;
-	float d1, d2, p1, p2;
+
 	for (i = 0; i < N; i++)
 	{
 		d1 = (log(pS0[i] / pK[i]) + (r + sig * sig * 0.5) *
@@ -17,3 +14,4 @@ void EU_OP::_V0(float *pT, float *pK, float *pS0, float *pC)
 			exp((-1.0) * r * pT[i]) * p2;
 	}
 }
+

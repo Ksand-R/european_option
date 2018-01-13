@@ -1,15 +1,13 @@
 #include "Header.h"
-using namespace EU_OP;
 
-void EU_OP::_V8(float *pT, float *pK, float *pS0, float *pC)
+void _V8(float *pT, float *pK, float *pS0, float *pC)
 {
 	int i;
-	float d1, d2, erf1, erf2, invf;
-	float sig2 = sig * sig;
+	float d1, d2, erf1, erf2;
 
 #pragma simd 
 #pragma vector nontemporal
-#pragma omp parallel for private(invf, d1, d2, erf1, erf2)
+#pragma omp parallel for private(d1, d2, erf1, erf2)
 	for (i = 0; i < N; i++)
 	{
 		d1 = (logf(pS0[i] / pK[i]) + (r + sig * sig * 0.5f) *

@@ -1,11 +1,9 @@
 #include "Header.h"
-using namespace EU_OP;
 
-void EU_OP::_V7(float *pT, float *pK, float *pS0, float *pC)
+void _V7(float *pT, float *pK, float *pS0, float *pC)
 {
 	int		i;
-	float	d1, d2, erf1, erf2, invf;
-	float	sig2 = sig * sig;
+	float	d1, d2, erf1, erf2;
 
 #pragma simd
 #pragma omp parallel for private(invf, d1, d2, erf1, erf2)
