@@ -23,7 +23,7 @@ GetPrices option_array[9] =
 	_V0, //preference 1
 	_V1, //preference 2
 	_V2, //erf
-	//_V3, //restrict
+	_V3, //restrict
 	_V4, //#pragma simd #pragma vector always
 	_V5, //#pragma simd invsqrt2_1
 	_V6, //#pragma simd invsqrt2_2
