@@ -3,12 +3,13 @@ import sys, datetime, os, time
 
 now = datetime.datetime.now()
 
-N       = [10000, 20000, 30000, 40000]
+N       = [1000000, 2000000, 3000000, 4000000]
 count   = 7
 num_seq_ver = 7
 sec_times = []
-par_ver = {0:7, 1:8}
 par_times = []
+
+par_ver = {0:7, 1:8}
 threads = {0:1, 1:2, 2:4, 3:8, 4:16}
 abs_path = os.getcwd()
 
@@ -51,27 +52,31 @@ def write_log(N_):
     if not os.path.exists(dt) and not os.path.isfile(dt):
         os.mkdir(dt)
     os.chdir(dt)
-
-    f = open('!summary_' + str(N_) + '.log', 'a')
     _iter = 0
-    for i in sec_times:   
-    	info = "%s %s %s %s %s %s %s %s" % ("version ", str(_iter), "; amo of opts ", \
-    		str(N_), "; num tr ", str(1), "; counts ", str(count))     
-        f.write(info + "; min time " +  str(i) + " seconds" +"\n")
-        _iter += 1
+    with open('!summary_' + str(N_) + '.log', 'a') as f:
+	    print(sec_times)
+	    for i in sec_times:   
+	    	info = "%s %s %s %s %s %s %s %s" % ("version ", str(_iter), "; amo of opts ", \
+	    		str(N_), "; num tr ", str(1), "; counts ", str(count))     
+	        f.write(info + "; min time " +  str(i) + " seconds" +"\n")
+	        _iter += 1
 
-    _iter = 0
-    for i in par_times:   
-        info = "%s %s %s %s %s %s %s %s" % \
-            ("version ", str((_iter // 5) + 7), "; amo of opts ", str(N_), "; num tr ", \
-            str(threads[_iter % 5]), "; counts ", str(count))
-        f.write(info + "; min time " +  str(i) + " seconds" + "\n")
-        _iter += 1    
+	    _iter = 0
+	    print(par_times)
+	    for i in par_times:   
+	        info = "%s %s %s %s %s %s %s %s" % \
+	            ("version ", str((_iter // 5) + 7), "; amo of opts ", str(N_), "; num tr ", \
+	            str(threads[_iter % 5]), "; counts ", str(count))
+	        f.write(info + "; min time " +  str(i) + " seconds" + "\n")
+	        _iter += 1    
+    del sec_times[:]
+    del par_times[:]
 
-    f.close()
+
 if __name__ == '__main__':
 	for i in N:
 	    get_times(i)
 	    write_log(i)
 	    os.chdir(abs_path)
-	    print(i)
+        print(sec_times)
+        print(par_times)
