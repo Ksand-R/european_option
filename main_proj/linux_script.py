@@ -1,20 +1,21 @@
 from subprocess import Popen, PIPE
-import sys, datetime, os
+import sys, datetime, os, time
 
 now = datetime.datetime.now()
 
-version = (sys.argv[1])
-N       = (sys.argv[2])
-num_tr  = (sys.argv[3])
-count   = int(sys.argv[4])
+N       = [10000, 20000, 30000, 40000]
+count   = 7
+num_seq_ver = 7
+sec_times = []
+par_ver = {0:7, 1:8}
+par_times = []
+threads = {0:1, 1:2, 2:4, 3:8, 4:16}
+abs_path = os.getcwd()
 
-dt = "v" + list(version)[-1] + now.strftime("%d-%m-%Y-%H:%M") + ".log"
+dt = now.strftime("%d-%m-%Y-%H:%M:%S")
 
-info = "%s %s %s %s %s %s %s %s" % ("version ", version, "; amo of opts ", N, "; num tr ", num_tr, "; counts ", str(count))
-
-def one_res():
-    #name ="%s %i %i %i" % ("a.out", version, N, num_tr)
-    name = "/home/romanov_a/EU_OP/a.out "+ version +" "+ N + " " + num_tr
+def one_res(version, name):
+   
     proc = Popen(name, shell=True, stdout=PIPE, stderr=PIPE)
     proc.wait()    
     res = proc.communicate()  
@@ -22,23 +23,55 @@ def one_res():
        return res[1]
     return res[0]
 
-def min_res():
-
+def min_res(version, name):
     min_time = 10000
     
     for i in range(count):
-        time = float(one_res())
+    
+        time = float(one_res(version, name))
         if time < min_time:
             min_time = time
     return min_time
 
-def write_log():
-    min_time = min_res()
-    os.chdir("logs")
-    f = open(dt, 'a')
-    f.write(str(info) + "; min time " +  str(min_time) + "\n")
-    f.close()    
+def get_times(_N):
+    for version in range(7):
+        name = "srun -n 1 -p all -t 20 " + os.path.join(os.getcwd(), 'a.out ') + \
+            str(version) +" "+ str(_N) + " " + str(1)
+        sec_times.append((min_res(version, name))) 
 
-#if main == name
-#add autorun for every version
-write_log()
+    for version in par_ver:
+        for thr in threads:
+                    name = "srun -n 1 -p all -t 10 " + os.path.join(os.getcwd(), 'a.out ') + \
+                        str(par_ver[version]) +" "+ str(_N) + " " + str(threads[thr])
+                    par_times.append((min_res(par_ver[version], name))) 
+
+
+def write_log(N_):
+    os.chdir("logs")
+    if not os.path.exists(dt) and not os.path.isfile(dt):
+        os.mkdir(dt)
+    os.chdir(dt)
+
+    f = open('!summary_' + str(N_) + '.log', 'a')
+    _iter = 0
+    for i in sec_times:   
+    	info = "%s %s %s %s %s %s %s %s" % ("version ", str(_iter), "; amo of opts ", \
+    		str(N_), "; num tr ", str(1), "; counts ", str(count))     
+        f.write(info + "; min time " +  str(i) + " seconds" +"\n")
+        _iter += 1
+
+    _iter = 0
+    for i in par_times:   
+        info = "%s %s %s %s %s %s %s %s" % \
+            ("version ", str((_iter // 5) + 7), "; amo of opts ", str(N_), "; num tr ", \
+            str(threads[_iter % 5]), "; counts ", str(count))
+        f.write(info + "; min time " +  str(i) + " seconds" + "\n")
+        _iter += 1    
+
+    f.close()
+if __name__ == '__main__':
+	for i in N:
+	    get_times(i)
+	    write_log(i)
+	    os.chdir(abs_path)
+	    print(i)

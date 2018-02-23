@@ -28,7 +28,7 @@ extern float	p1, p2;
 void _V0(float *pT, float *pK, float *pS0, float *pC);
 void _V1(float *pT, float *pK, float *pS0, float *pC);
 void _V2(float *pT, float *pK, float *pS0, float *pC);
-//void _V3(float* restrict pT, float* restrict pK, float* restrict pS0, float* restrict pC);
+void _V3(float* restrict pT, float* restrict pK, float* restrict pS0, float* restrict pC);
 void _V4(float *pT, float *pK, float *pS0, float *pC);
 void _V5(float *pT, float *pK, float *pS0, float *pC);
 void _V6(float *pT, float *pK, float *pS0, float *pC);
