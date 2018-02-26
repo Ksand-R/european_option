@@ -1,2 +1,5 @@
 GOMP_CPU_AFFINITY="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15" OMP_NUM_THREADS=16 srun -n 1 -p all -t 10 python linux_script.py 7 100000000 1 15
 icpc *.cpp -O2 -qopenmp -restrict -mkl:sequential -qopt-report-phase=vec -xAVX
+icpc *.cpp -O2 -qopenmp -restrict -mkl:sequential -fimf-precision=low -fimf-domain-exclusion=31 -o low_prec.out -xAVX
+icpc *.cpp -fast -qopenmp -restrict -mkl:sequential -o fast_low_prec.out -fimf-precision=low -fimf-domain-exclusion=31 -xAVX
+icpc *.cpp -O2 -qopenmp -restrict -mkl:sequential -qopt-report-phase=all -xAVX
