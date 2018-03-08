@@ -1,3 +1,4 @@
+//omp
 #include "Header.h"
 
 void _V7(float *pT, float *pK, float *pS0, float *pC)

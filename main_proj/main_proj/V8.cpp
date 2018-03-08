@@ -1,3 +1,4 @@
+//omp_nontemporal
 #include "Header.h"
 
 void _V8(float *pT, float *pK, float *pS0, float *pC)

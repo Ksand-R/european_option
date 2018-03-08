@@ -1,4 +1,6 @@
+//restrict
 #include "Header.h"
+
 void _V3(float* restrict pT, float* restrict pK, float* restrict pS0, float* restrict pC)
 {
 	int		i;

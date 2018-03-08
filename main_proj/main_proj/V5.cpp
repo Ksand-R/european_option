@@ -1,3 +1,4 @@
+//using_defined_invsqrt2
 #include "Header.h"
 
 void _V5(float* pT, float* pK, float* pS0, float* pC)

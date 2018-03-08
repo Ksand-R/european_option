@@ -34,9 +34,10 @@ void _V5(float *pT, float *pK, float *pS0, float *pC);
 void _V6(float *pT, float *pK, float *pS0, float *pC);
 void _V7(float *pT, float *pK, float *pS0, float *pC);
 void _V8(float *pT, float *pK, float *pS0, float *pC);
+void _V9(float *pT, float *pK, float *pS0, float *pC);
 
 typedef void(*GetPrices)(float *pT, float *pK, float *pS0, float *pC);
 
-extern GetPrices option_array[9];
+extern GetPrices option_array[10];
 
 #endif // !___EU_OP___

@@ -1,7 +1,7 @@
 #include "Header.h"
 int		num_Threads;
 int		N; //amount of options 
-int 		version;
+int 	version;
 double	_time;
 double	start, finish;
 
@@ -18,7 +18,7 @@ float	sig2 = sig * sig;
 float	invf;
 float	p1, p2;
 
-GetPrices option_array[9] =
+GetPrices option_array[10] =
 {
 	_V0, //preference 1
 	_V1, //preference 2
@@ -28,6 +28,7 @@ GetPrices option_array[9] =
 	_V5, //#pragma simd invsqrt2_1
 	_V6, //#pragma simd invsqrt2_2
 	_V7, //#pragma simd #pragma omp parallel for private
-	_V8  // _V7 + #pragma vector nontemporal
+	_V8, // _V7 + #pragma vector nontemporal
+	_V9 // vect without restrict
 };
 
