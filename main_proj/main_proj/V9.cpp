@@ -3,6 +3,8 @@
 
 void _V9(float *pT, float *pK, float *pS0, float *pC)
 {
+	int		i;
+	float	d1, d2;
 	#pragma simd
 	#pragma vector always	
 	for (i = 0; i < N; i++)

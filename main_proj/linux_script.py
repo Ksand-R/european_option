@@ -3,12 +3,12 @@ import sys, datetime, os, time
 
 now = datetime.datetime.now()
 
-#TODO: run script with file.out from argv
 file 	= (sys.argv[1])
-N       = [100000000 ,268435456]
+N       = [10000 ,26843]
 count   = 7
-num_seq_ver = 7
 sec_times = []
+num_seq_ver = {0:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:9}
+len_seq = 8
 par_times = []
 
 par_ver = {0:7, 1:8}
@@ -42,10 +42,16 @@ def min_res(version, name):
     return min_time
 
 def get_times(_N):
-    for version in range(num_seq_ver):
+    for version in range(8):
         name = "srun -n 1 -p all -t 30 " + os.path.join(os.getcwd(), str(file)) + " " +\
-            str(version) +" "+ str(_N) + " " + str(1)
-        sec_times.append((min_res(version, name))) 
+            str(num_seq_ver[version]) +" "+ str(_N) + " " + str(1)
+        print(name)
+        print(num_seq_ver[version])
+        sec_times.append((min_res(float(num_seq_ver[version]), name))) 
+
+    # name = "srun -n 1 -p all -t 30 " + os.path.join(os.getcwd(), str(file)) + " " +\
+    #     str(9) +" "+ str(_N) + " " + str(1)
+    # sec_times.append((min_res(version, name)))
 
     for version in par_ver:
         for thr in threads:
