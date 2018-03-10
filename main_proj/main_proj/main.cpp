@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 	version		= atoi(argv[1]);
 	N 			= atoi(argv[2]);
 	num_Threads = atoi(argv[3]);
-
+	omp_set_num_threads(num_Threads);
 	float* pT 	= new float[4 * N];
 	float* pK 	= pT + N;
 	float* pS0 	= pT + 2 * N;
