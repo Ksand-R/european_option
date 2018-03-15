@@ -18,33 +18,42 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="V9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V0.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V5.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V6.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V7.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="V8.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

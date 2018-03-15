@@ -1,0 +1,24 @@
+ошибка в вЄрстке
+архиваци€
+time(asctime[t])
+python exeption
+read icc man
+read presentation
+-qiqo
+-ansi
+svml  
+add omp_threads
+
+
+-O0
+-ipo
+
+-fcode-asm
+	Produce assembly file with optional code annotations.
+-H in compile
+
+-fast
+	same as:
+	-ipo ЦO3 -no-prec-div Цstatic Цfp-model fast=2 -xHost)
+
+#TODO: describe warm up
