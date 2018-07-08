@@ -1,0 +1,3 @@
+1. change cmakefile, add compil options
+2. add if-case for target platform
+3. how to test without class
