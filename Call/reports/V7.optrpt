@@ -1,0 +1,22 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+Begin optimization report for: _V7(float *, float *, float *, float *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at V7.cpp(9,1)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at V7.cpp(9,1)
+   remark #15301: SIMD LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at V7.cpp(9,1)
+<Remainder loop for vectorization>
+LOOP END
+===========================================================================

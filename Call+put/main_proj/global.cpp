@@ -1,4 +1,5 @@
 #include "Header.h"
+
 int		num_Threads;
 int		N; //amount of options 
 int 	version;
