@@ -1,0 +1,21 @@
+version  Base  ; amo of opts  		100000000 ; num tr  1 ; counts  5; min time 22.9445 seconds
+version  fp  ; amo of opts  		100000000 ; num tr  1 ; counts  5; min time 21.3754 seconds
+version  erf  ; amo of opts 		100000000 ; num tr  1 ; counts  5; min time 9.00446 seconds
+version  restrict  ; amo of opts  	100000000 ; num tr  1 ; counts  5; min time 7.83504 seconds
+version  fp_simd  ; amo of opts  	100000000 ; num tr  1 ; counts  5; min time 19.2376 seconds
+version  vector  ; amo of opts		100000000 ; num tr  1 ; counts  5; min time 1.86125 seconds
+version  invsqrt2_1  ; amo of opts  	100000000 ; num tr  1 ; counts  5; min time 2.14348 seconds
+version  invsqrt2_2  ; amo of opts 	100000000 ; num tr  1 ; counts  5; min time 7.02624 seconds
+--------------------------------------------------------------------------------
+version  8 ; amo of opts  100000000 ; num tr  1 ; counts  5; min time 1.34504 seconds
+version  8 ; amo of opts  100000000 ; num tr  2 ; counts  5; min time 0.661221 seconds
+version  8 ; amo of opts  100000000 ; num tr  4 ; counts  5; min time 0.343378 seconds
+version  8 ; amo of opts  100000000 ; num tr  8 ; counts  5; min time 0.183284 seconds
+version  8 ; amo of opts  100000000 ; num tr  1 ; counts  5; min time 0.113168 seconds
+
+version  9 ; amo of opts  100000000 ; num tr  2 ; counts  5; min time 1.42864 seconds
+version  9 ; amo of opts  100000000 ; num tr  4 ; counts  5; min time 0.668034 seconds
+version  9 ; amo of opts  100000000 ; num tr  8 ; counts  5; min time 0.360324 seconds
+version  9 ; amo of opts  100000000 ; num tr  1 ; counts  5; min time 0.193171 seconds
+version  9 ; amo of opts  100000000 ; num tr  2 ; counts  5; min time 0.118834 seconds
+--------------------------------------------------------------------------------
