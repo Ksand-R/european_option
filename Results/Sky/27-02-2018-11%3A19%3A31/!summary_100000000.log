@@ -1,0 +1,25 @@
+version  Base  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 17.7724 seconds
+version  fp  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 15.1389 seconds
+version  erf  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 5.41611 seconds
+version  restrict  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 0.577878 seconds
+version  vector  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 0.570703 seconds
+version  invsqrt2_1  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 0.579541 seconds
+version  invsqrt2_2  ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 5.05902 seconds
+--------------------------------------------------------------------------------
+version  7 ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 0.504514 seconds
+version  7 ; amo of opts  100000000 ; num tr  2 ; counts  7; min time 0.540759 seconds
+version  7 ; amo of opts  100000000 ; num tr  4 ; counts  7; min time 0.22857 seconds
+version  7 ; amo of opts  100000000 ; num tr  8 ; counts  7; min time 0.11436 seconds
+version  7 ; amo of opts  100000000 ; num tr  16 ; counts  7; min time 0.057652 seconds
+version  7 ; amo of opts  100000000 ; num tr  20 ; counts  7; min time 0.0464368 seconds
+version  7 ; amo of opts  100000000 ; num tr  40 ; counts  7; min time 0.0357418 seconds
+version  7 ; amo of opts  100000000 ; num tr  80 ; counts  7; min time 0.019501 seconds
+version  8 ; amo of opts  100000000 ; num tr  1 ; counts  7; min time 0.53282 seconds
+version  8 ; amo of opts  100000000 ; num tr  2 ; counts  7; min time 0.584176 seconds
+version  8 ; amo of opts  100000000 ; num tr  4 ; counts  7; min time 0.234224 seconds
+version  8 ; amo of opts  100000000 ; num tr  8 ; counts  7; min time 0.117148 seconds
+version  8 ; amo of opts  100000000 ; num tr  16 ; counts  7; min time 0.058995 seconds
+version  8 ; amo of opts  100000000 ; num tr  20 ; counts  7; min time 0.0474558 seconds
+version  8 ; amo of opts  100000000 ; num tr  40 ; counts  7; min time 0.0263 seconds
+version  8 ; amo of opts  100000000 ; num tr  80 ; counts  7; min time 0.0185618 seconds
+--------------------------------------------------------------------------------

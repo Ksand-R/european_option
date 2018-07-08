@@ -1,0 +1,29 @@
+version  Base  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 264.187 seconds
+version  fp  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 254.826 seconds
+version  erf  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 84.6974 seconds
+version  restrict  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 3.14072 seconds
+version  vector  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 3.12233 seconds
+version  invsqrt2_1  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 3.14747 seconds
+version  invsqrt2_2  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 90.5402 seconds
+--------------------------------------------------------------------------------
+version  7 ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 2.95958 seconds
+version  7 ; amo of opts  268435456 ; num tr  2 ; counts  7; min time 1.48112 seconds
+version  7 ; amo of opts  268435456 ; num tr  4 ; counts  7; min time 0.739817 seconds
+version  7 ; amo of opts  268435456 ; num tr  8 ; counts  7; min time 0.367977 seconds
+version  7 ; amo of opts  268435456 ; num tr  16 ; counts  7; min time 0.184549 seconds
+version  7 ; amo of opts  268435456 ; num tr  17 ; counts  7; min time 0.173878 seconds
+version  7 ; amo of opts  268435456 ; num tr  34 ; counts  7; min time 0.0875809 seconds
+version  7 ; amo of opts  268435456 ; num tr  68 ; counts  7; min time 0.0695388 seconds
+version  8 ; amo of opts  268435456 ; num tr  136 ; counts  7; min time 0.066422 seconds
+version  8 ; amo of opts  268435456 ; num tr  272 ; counts  7; min time 0.0753739 seconds
+version  8 ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 2.9526 seconds
+version  8 ; amo of opts  268435456 ; num tr  2 ; counts  7; min time 1.48371 seconds
+version  8 ; amo of opts  268435456 ; num tr  4 ; counts  7; min time 0.742574 seconds
+version  8 ; amo of opts  268435456 ; num tr  8 ; counts  7; min time 0.369923 seconds
+version  8 ; amo of opts  268435456 ; num tr  16 ; counts  7; min time 0.18512 seconds
+version  8 ; amo of opts  268435456 ; num tr  17 ; counts  7; min time 0.174245 seconds
+version  9 ; amo of opts  268435456 ; num tr  34 ; counts  7; min time 0.0878282 seconds
+version  9 ; amo of opts  268435456 ; num tr  68 ; counts  7; min time 0.0570211 seconds
+version  9 ; amo of opts  268435456 ; num tr  136 ; counts  7; min time 0.053479 seconds
+version  9 ; amo of opts  268435456 ; num tr  272 ; counts  7; min time 0.0601521 seconds
+--------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+version  Base  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 47.6909 seconds
+version  fp  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 40.5822 seconds
+version  erf  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 14.5423 seconds
+version  restrict  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 1.63275 seconds
+version  vector  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 1.61062 seconds
+version  invsqrt2_1  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 1.64183 seconds
+version  invsqrt2_2  ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 13.5615 seconds
+--------------------------------------------------------------------------------
+version  7 ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 1.49082 seconds
+version  7 ; amo of opts  268435456 ; num tr  2 ; counts  7; min time 1.41002 seconds
+version  7 ; amo of opts  268435456 ; num tr  4 ; counts  7; min time 0.764494 seconds
+version  7 ; amo of opts  268435456 ; num tr  8 ; counts  7; min time 0.348378 seconds
+version  7 ; amo of opts  268435456 ; num tr  16 ; counts  7; min time 0.172464 seconds
+version  7 ; amo of opts  268435456 ; num tr  20 ; counts  7; min time 0.130959 seconds
+version  7 ; amo of opts  268435456 ; num tr  40 ; counts  7; min time 0.071244 seconds
+version  7 ; amo of opts  268435456 ; num tr  80 ; counts  7; min time 0.0515931 seconds
+version  8 ; amo of opts  268435456 ; num tr  1 ; counts  7; min time 1.4967 seconds
+version  8 ; amo of opts  268435456 ; num tr  2 ; counts  7; min time 1.41563 seconds
+version  8 ; amo of opts  268435456 ; num tr  4 ; counts  7; min time 0.760941 seconds
+version  8 ; amo of opts  268435456 ; num tr  8 ; counts  7; min time 0.331025 seconds
+version  8 ; amo of opts  268435456 ; num tr  16 ; counts  7; min time 0.169059 seconds
+version  8 ; amo of opts  268435456 ; num tr  20 ; counts  7; min time 0.12608 seconds
+version  8 ; amo of opts  268435456 ; num tr  40 ; counts  7; min time 0.0963421 seconds
+version  8 ; amo of opts  268435456 ; num tr  80 ; counts  7; min time 0.0490541 seconds
+--------------------------------------------------------------------------------
