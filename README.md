@@ -1,11 +1,13 @@
-A scientific work
+# A scientific work
 
-learning HPS using Black-Scholes benchmark
+### Learning HPS using Black-Scholes benchmark
 
-Name: Calculation of the fair price of an option of the European type
+### Name: Calculation of the fair price of an option of the European type
 
-Scientific leader: Meyerov I. B; Lobachevsky State University of Nizhni Novgorod, Russia
+### Scientific leader: Meyerov I. B; Lobachevsky State University of Nizhni Novgorod, Russia
 
+
+#### Wiki articles:
 
 * [The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf)
 * [Black-Scholes model](https://en.wikipedia.org/wiki/Black–Scholes_model)
